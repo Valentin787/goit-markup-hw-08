@@ -1,0 +1,72 @@
+/*Pagination section*/
+
+.pagination-section {
+  & {
+    padding: 94px 0;
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      padding-top: 60px;
+    }
+    @media screen and(max-width:767px) {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      margin-bottom: 30px;
+    }
+    @media screen and(max-width:767px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list .item + .item {
+    margin-left: 8px;
+    @media screen and(max-width:767px) {
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0px;
+        justify-content: flex-start;
+      }
+      &:nth-child(4n) {
+        margin-left: 0px;
+      }
+    }
+  }
+  &__item {
+    @media screen and(max-width:767px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__button {
+    background-color: $button-color;
+    color: $head-text;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
+  }
+  &__button-active {
+    color: $primary-color;
+    background-color: $background-button;
+  }
+  &__button:hover {
+    background-color: $accent-text;
+    color: $primary-color;
+  }
+  &__button:focus {
+    background-color: $accent-text;
+    color: $primary-color;
+  }
+}

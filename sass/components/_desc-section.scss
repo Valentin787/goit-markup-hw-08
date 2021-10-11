@@ -1,0 +1,102 @@
+/*Description section*/
+
+.desc {
+  &-section {
+    display: flex;
+    align-items: center;
+    padding-bottom: 94px;
+    padding-top: 94px;
+
+    @media screen and(min-width:768px) and (max-width: 1024px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  /*&-section__list .item + .item {
+    /*margin-left: 30px;*/
+
+  &-section__list {
+    display: flex;
+    align-items: center;
+    @media screen and(min-width:768px) and (max-width: 1024px) {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    @media screen and(max-width:767px) {
+      flex-direction: column;
+    }
+  }
+
+  &-section__item {
+    @media screen and(min-width:1024px) {
+      margin-right: 30px;
+    }
+    &-section__item:last-child {
+      margin-right: 0px;
+    }
+
+    @media screen and(min-width:768px) and (max-width: 1024px) {
+      width: calc(100% / 2 - 15px);
+      margin-bottom: 30px;
+      margin-right: 30px;
+      height: 226px;
+    }
+    &:nth-child(2n) {
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        margin-right: 0px;
+      }
+    }
+    &:nth-last-child(-n + 2) {
+      @media screen and(min-width:768px) and (max-width: 1024px) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  &-section__icon {
+    // margin-bottom: 30px;
+    background-color: $button-color;
+    border: none;
+    border-radius: 4px;
+    //width: 270px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and(max-width:480px) {
+    }
+  }
+  &-section__text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    //margin-bottom: 0px;
+    //margin-top: 10px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0px;
+      margin-top: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      text-align: start;
+    }
+  }
+  &-section__subtitle {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: 767px) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

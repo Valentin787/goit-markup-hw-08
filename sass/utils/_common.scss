@@ -1,0 +1,82 @@
+body.modal-open {
+  overflow: hidden;
+}
+.social-links {
+  display: flex;
+  margin: 0px 10px 0 0;
+}
+.social-links:first-child {
+  margin-left: 0px;
+}
+.social-links:last-child {
+  margin-right: 0px;
+}
+.overlay {
+  max-width: 1600px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/mob/hero_mob.jpg);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/tablet/hero_tab@2x.jpg);
+  }
+
+  @media screen and(min-width:768px) {
+    background-image: url(../images/tablet/hero_tab.jpg);
+    @media screen and(min-width:768px) and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/tablet/hero_tab@2x.jpg);
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    background-image: url(../images/desctop/hero_des.jpg);
+    @media screen and(min-width:768px) and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/desctop/hero_des@2x.jpg);
+    }
+  }
+
+  background-size: cover;
+  background-position: center;
+  background-color: $footer-background;
+}
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.5);
+}
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+h3 {
+  display: inline;
+  color: $head-text;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}

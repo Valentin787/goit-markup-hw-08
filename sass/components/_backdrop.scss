@@ -1,0 +1,215 @@
+/* Backdrop section*/
+
+.modal {
+  & {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    overflow-y: scroll;
+  }
+
+  &__wrap {
+    position: absolute;
+
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    background-color: $primary-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    @media screen and(max-width:1023px) {
+      max-width: 450px;
+      width: 100%;
+      max-height: 609px;
+      top: 55%;
+    }
+  }
+  &__button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 17px;
+    right: 17px;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    background-color: $primary-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      fill: $accent-text;
+    }
+    &:focus {
+      fill: $accent-text;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  &__form-title {
+    margin: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $head-text;
+  }
+  &__form-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  &__form-label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $primary-text;
+    display: block;
+  }
+  &__form-input {
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    &:focus {
+      outline: transparent;
+      border: 1px solid $accent-text;
+      cursor: text;
+    }
+    @media screen and (max-width: 1023px) {
+      max-width: 370px;
+      max-height: 40px;
+    }
+  }
+
+  &__form-textarea {
+    width: 448px;
+
+    padding-left: 15px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+
+    border-radius: 4px;
+    &:hover {
+      border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    &:focus {
+      outline: transparent;
+      border: 1px solid $accent-text;
+      cursor: text;
+    }
+    @media screen and (max-width: 1023px) {
+      max-width: 370px;
+      display: flex;
+      text-align: start;
+      justify-content: start;
+    }
+  }
+
+  &__form-inner {
+    &:focus-within {
+      fill: $accent-text;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+  &__btn {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 10px 55px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border: none;
+    border-radius: 4px;
+
+    color: $primary-color;
+    background-color: $accent-text;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  &__form-icon {
+    position: absolute;
+
+    top: 55%;
+    left: 15px;
+    &:focus {
+      fill: $accent-text;
+    }
+    @media screen and(max-width:1023px) {
+      top: 50%;
+    }
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1023px) {
+      font-size: 12px;
+    }
+  }
+  &__link {
+    color: $accent-text;
+    padding-left: 2px;
+    text-decoration: underline;
+  }
+  &__icon {
+    display: inline-block;
+
+    width: 16px;
+    height: 15px;
+    border: 2px solid $head-text;
+    border-radius: 2px;
+    margin-right: 7px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  &__checkbox {
+    &:checked {
+      + .icon {
+        border-color: transparent;
+        background-image: url("../images/icon/full-check.svg");
+        background-color: $accent-text;
+        background-size: contain;
+        background-origin: border-box;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  }
+}
