@@ -4,6 +4,12 @@ body {
   color: #757575;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    overflow: auto !important;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -47,31 +53,31 @@ body.modal-open {
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../images/tablet/hero_tab@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero_tab@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .overlay {
-    background-image: url(../images/tablet/hero_tab.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero_tab.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../images/tablet/hero_tab@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero_tab@2x.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .overlay {
-    background-image: url(../images/desctop/hero_des.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desctop/hero_des.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .overlay {
-    background-image: url(../images/desctop/hero_des@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desctop/hero_des@2x.jpg);
   }
 }
 
@@ -177,21 +183,6 @@ a {
 
 .header__nav-logo:focus {
   color: #2196f3;
-}
-
-@media screen and (min-width: 481px) and (max-width: 1023px) {
-  .header__nav-logo {
-    margin-bottom: 26px;
-    margin-top: 26px;
-    margin: 0px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .header__nav-logo {
-    margin-bottom: 16px;
-    margin-top: 16px;
-  }
 }
 
 .header__nav-text {
@@ -514,8 +505,9 @@ a {
 
 @media screen and (max-width: 767px) {
   .desc-section__subtitle {
-    align-items: center;
-    justify-content: center;
+    display: block;
+    margin-top: 30px;
+    text-align: center;
   }
 }
 
@@ -992,6 +984,7 @@ a {
   min-width: 358px;
   height: 50px;
   margin-right: 12px;
+  padding-left: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: #2f303a;
@@ -1289,11 +1282,6 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.product__card:hover .product__card__overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 @media screen and (min-width: 1024px) {
   .product__card {
     width: 370px;
@@ -1323,6 +1311,11 @@ a {
     margin-right: 0px;
     width: 100%;
   }
+}
+
+.product__card:hover .product__overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .product__info {

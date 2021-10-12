@@ -25,6 +25,11 @@
             <nav class="header__nav">
                 <a class="header__nav-logo" href="index.html">
                     <span class="header__nav-text">Web</span>Studio</a>
+                    <button class=" header__menu-toggle menu-toggle js-open-menu" aria-expanded="true" aria-controls="mobile-menu">
+                        <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                            <use href="./images/icon/icons.svg#icon-menu"></use>
+                        </svg>
+                    </button>
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
                         <a class="header__nav-link " href="index.html">Студия</a>
@@ -99,7 +104,7 @@
                                 ./images/tablet/port_1@2x.jpg 2x" media="(min-width: 768px)">
                             <source srcset="
                                 ./images/mob/port_1.jpg 1x, 
-                                ./images/mob/port_1@2x.jpg 2x" media="(min-width: 480px)">
+                                ./images/mob/port_1@2x.jpg 2x" media="(max-width: 767px)">
                             <img src="./images/img1.jpg" alt="Разработка веб-сайтов">
                         </picture>
                             <div class="product__overlay">
@@ -132,7 +137,7 @@
                                         ./images/tablet/port_2@2x.jpg 2x" media="(min-width: 768px)">
                                     <source srcset="
                                         ./images/mob/port_2.jpg 1x, 
-                                        ./images/mob/port_2@2x.jpg 2x" media="(min-width: 480px)">
+                                        ./images/mob/port_2@2x.jpg 2x" media="(max-width: 767px)">
                                     <img src="./images/img2.jpg" alt="Дизайн постеров">
                                 </picture>
 
@@ -166,7 +171,7 @@
                                         ./images/tablet/port_3@2x.jpg 2x" media="(min-width: 768px)">
                                     <source srcset="
                                         ./images/mob/port_3.jpg 1x, 
-                                        ./images/mob/port_3@2x.jpg 2x" media="(min-width: 480px)">
+                                        ./images/mob/port_3@2x.jpg 2x" media="(max-width: 767px)">
                                     <img src="./images/img3.jpg" alt="Разработка приложений">
                                 </picture>
 
@@ -200,7 +205,7 @@
                                         ./images/tablet/port_4@2x.jpg 2x" media="(min-width: 768px)">
                                     <source srcset="
                                         ./images/mob/port_4.jpg 1x, 
-                                        ./images/mob/port_4@2x.jpg 2x" media="(min-width: 480px)">
+                                        ./images/mob/port_4@2x.jpg 2x" media="(max-width: 767px)">
                                     <img src="./images/img4.jpg" alt="Маркетинговые услуги">
                                 </picture>
 
@@ -234,7 +239,7 @@
                                         ./images/tablet/port_5@2x.jpg 2x" media="(min-width: 768px)">
                                     <source srcset="
                                         ./images/mob/port_5.jpg 1x, 
-                                        ./images/mob/port_5@2x.jpg 2x" media="(min-width: 480px)">
+                                        ./images/mob/port_5@2x.jpg 2x" media="(max-width: 767px)">
                                     <img src="./images/img5.jpg" alt="Разработка приложений">
                                 </picture>
 
@@ -268,7 +273,7 @@
                                         ./images/tablet/port_6@2x.jpg 2x" media="(min-width: 768px)">
                                     <source srcset="
                                         ./images/mob/port_6.jpg 1x, 
-                                        ./images/mob/port_6@2x.jpg 2x" media="(min-width: 480px)">
+                                        ./images/mob/port_6@2x.jpg 2x" media="(max-width: 767px)">
                                     <img src="./images/img6.jpg" alt="Разработка веб-сайтов">
                                 </picture>
 
@@ -302,7 +307,7 @@
                                         ./images/tablet/port_7@2x.jpg 2x" media="(min-width: 768px)">
                                     <source srcset="
                                         ./images/mob/port_7.jpg 1x, 
-                                        ./images/mob/port_7@2x.jpg 2x" media="(min-width: 480px)">
+                                        ./images/mob/port_7@2x.jpg 2x" media="(max-width: 767px)">
                                     <img src="./images/img7.jpg" alt="Дизайн книг">
                                 </picture>
 
@@ -336,7 +341,7 @@
                                         ./images/tablet/port_8@2x.jpg 2x" media="(min-width: 768px)">
                                     <source srcset="
                                         ./images/mob/port_8.jpg 1x, 
-                                        ./images/mob/port_8@2x.jpg 2x" media="(min-width: 480px)">
+                                        ./images/mob/port_8@2x.jpg 2x" media="(max-width: 767px)">
                                     <img src="./images/img8.jpg" alt="Маркетинговые услуги">
                                 </picture>
 
@@ -370,7 +375,7 @@
                                         ./images/tablet/port_9@2x.jpg 2x" media="(min-width: 768px)">
                                     <source srcset="
                                         ./images/mob/port_9.jpg 1x, 
-                                        ./images/mob/port_9@2x.jpg 2x" media="(min-width: 480px)">
+                                        ./images/mob/port_9@2x.jpg 2x" media="(max-width: 767px)">
                                     <img src="./images/img9.jpg" alt="Разработка приложений">
                                 </picture>
 
@@ -464,6 +469,66 @@
             </form>
         </div>
     </footer>
+
+<!--Mobile menu-->
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+        <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+            <use href="./images/icon/icons.svg#icon-close40"></use>
+        </svg>
+    </button>
+    <div class="menu-nav">
+        <ul class="menu">
+
+            <li class="menu-list">
+                <a class="link" href="index.html">Студия</a>
+            </li>
+            <li class="menu-list">
+                <a class="link" href="portfolio.html">Портфолио</a>
+            </li>
+            <li class="menu-list">
+                <a class="link" href="">Контакты</a>
+            </li>
+        </ul>
+
+        <ul class="menu-contacts">
+            <li class="menu-contacts-item">
+                <a class="menu-contacts-tel" href="tel:+380961111111">
+                    +38 096 111 11 11
+                </a>
+            </li>
+            <li class="menu-contacts-item">
+                <a class="menu-contacts-mail" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                </a>
+            </li>
+        </ul>
+    </div>
+    <ul class="menu-social">
+        <li class="menu-social-link">
+            <a class="menu-social-item" href="">Instagram</a>
+        </li>
+        <li class="menu-social-link">
+            <a class="menu-social-item" href="">Twitter</a>
+        </li>
+        <li class="menu-social-link">
+            <a class="menu-social-item" href="">Facebook</a>
+
+        </li>
+        <li class="menu-social-link">
+            <a class="menu-social-item" href="">LinkedIn</a>
+        </li>
+    </ul>
+        
+        </div>
+        
+        
+        <script src="./js/speaker.js"></script>
+        <script src="./js/modal.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"></script>
+        <script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>

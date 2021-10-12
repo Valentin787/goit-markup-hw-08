@@ -23,7 +23,7 @@
                 <a class="header__nav-logo" href="index.html"> 
                     <span class="header__nav-text">Web</span>Studio</a>
 
-                    <button class=" header__menu-toggle menu-toggle js-open-menu" aria-expanded="true" aria-controls="mobile-menu">
+                    <button class=" header__menu-toggle menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
                         <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
                             <use href="./images/icon/icons.svg#icon-menu"></use>
                         </svg>
@@ -196,7 +196,7 @@
                                 ./images/tablet/team_1@2x.jpg 2x" media="(min-width: 768px)">
                             <source srcset="
                                 ./images/mob/team_1.jpg 1x, 
-                                ./images/mob/team_1@2x.jpg 2x" media="(min-width: 480px)">
+                                ./images/mob/team_1@2x.jpg 2x" media="(max-width: 767px)">
                             <img src="./images/product-designer.jpg" alt="Настройка приложения"  >
                         </picture>
 
@@ -254,7 +254,7 @@
                                 ./images/tablet/team_2@2x.jpg 2x" media="(min-width: 768px)">
                             <source srcset="
                                 ./images/mob/team_2.jpg 1x, 
-                                ./images/mob/team_2@2x.jpg 2x" media="(min-width: 480px)">
+                                ./images/mob/team_2@2x.jpg 2x" media="(max-width: 767px)">
                         
                             <img src="./images/frontend-developer.jpg" alt="Разработчик внешнего интерфеса">
                         </picture>
@@ -315,7 +315,7 @@
                                 ./images/tablet/team_3@2x.jpg 2x" media="(min-width: 768px)">
                             <source srcset="
                                 ./images/mob/team_3.jpg 1x, 
-                                ./images/mob/team_3@2x.jpg 2x" media="(min-width: 480px)">
+                                ./images/mob/team_3@2x.jpg 2x" media="(max-width: 767px)">
                             <img src="./images/marketing.jpg" alt="маркетолог">
                         </picture>
                         <div class="team-section__inner">
@@ -374,7 +374,7 @@
                                 ./images/tablet/team_4@2x.jpg 2x" media="(min-width: 768px)">
                             <source srcset="
                                 ./images/mob/team_4.jpg 1x, 
-                                ./images/mob/team_4@2x.jpg 2x" media="(min-width: 480px)">
+                                ./images/mob/team_4@2x.jpg 2x" media="(max-width: 767px)">
                             <img src="./images/ui-designer.jpg" alt="дизайнер">
                         </picture>
                         <div class="team-section__inner"> 
@@ -553,7 +553,7 @@
                 </svg>
             </button>
     
-        <form class="modal__form" autocomplete="on">
+        <form class="modal__form js-speaker-form" autocomplete="on">
             <p class="modal__form-title">Оставьте свои данные, мы вам перезвоним</p>
             <div class="modal__form-wrap">
                 <div class="modal__form-inner">
@@ -579,7 +579,7 @@
                 </div>
                 <div class="modal__form-inner">
                     <label class="modal__form-label" for="comment">Комментарий</label>
-                        <textarea class="modal__form-textarea" name="comment" id="comment" cols="30" rows="8" autofocus placeholder
+                        <textarea class="modal__form-textarea" name="comment" id="comment" cols="30" rows="8" autofocus 
                         placeholder="Введите текст">
                         </textarea>
                 </div>
